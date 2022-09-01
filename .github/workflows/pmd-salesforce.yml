@@ -6,9 +6,7 @@ jobs:
     steps:
       - name: Check APEX pmd rules
         uses: legetz/setup-pmd@v6.48
-      - run: pmd -language apex --dir . --rulesets ./pmd-rules.xml -f text
-
-    steps:
+        run: pmd -language apex --dir . --rulesets ./pmd-rules.xml -f text
       - name: Apex design
         uses: legetz/setup-pmd@v6.48
-      - run: pmd --dir ./force-app/main/default/classes -R category/apex/design.xml -f text
+        run: pmd --dir ./force-app/main/default/classes -R category/apex/design.xml -f text
